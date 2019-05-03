@@ -25,7 +25,6 @@ const addPlayerAsync = (playerID) => async dispatch => {
       firstName: data.data[0].player.first_name,
       lastName: data.data[0].player.last_name,
       team: data.data[0].team.full_name}));
-    console.log(data.data[0].player.first_name);
   } catch (e) {
     dispatch(() => e);
   }
