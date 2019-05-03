@@ -13,3 +13,5 @@ const playersReducer = (state = playersReducerDefaultState, action) => {
       return state;
     }
 }
+
+export default playersReducer;
