@@ -1,5 +1,6 @@
-// ADD_PLAYER
-const addPlayer = (
+// SHOW_PLAYER
+
+const showPlayer = (
   {
     id = undefined,
     firstName = "",
@@ -7,7 +8,7 @@ const addPlayer = (
     team = "",
   } = {}
 ) => ({
-  type: "ADD_PLAYER",
+  type: "SHOW_PLAYER",
   player: {
     id,
     firstName,
@@ -16,11 +17,13 @@ const addPlayer = (
   }
 });
 
-const addPlayerAsync = (playerID) => async dispatch => {
+// ASYNCHRONOUS ACTION
+
+const showPlayerAsync = (playerID) => async dispatch => {
   try {    
     const result = await fetch(`https://www.balldontlie.io/api/v1/stats?seasons[]=2018&player_ids[]=${playerID}&per_page=100`);
     const data = await result.json();
-    dispatch(addPlayer({
+    dispatch(showPlayer({
       id: data.data[0].player.id,
       firstName: data.data[0].player.first_name,
       lastName: data.data[0].player.last_name,
@@ -30,4 +33,4 @@ const addPlayerAsync = (playerID) => async dispatch => {
   }
 };
 
-export default addPlayerAsync;
+export default showPlayerAsync;
