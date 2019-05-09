@@ -4,7 +4,7 @@ import playerReducer from "../reducers/player";
 import filtersReducer from "../reducers/filters";
 import compareReducer from "../reducers/compare";
 
-export default () => {
+const configureStore = () => {
   const store = createStore(
     combineReducers({
       player: playerReducer,
@@ -15,3 +15,4 @@ export default () => {
   return store;
 };
 
+export default configureStore;

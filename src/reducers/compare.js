@@ -9,6 +9,8 @@ const compareReducer = (state = compareReducerDefaultState, action) => {
         ...state,
         action.player
       ];
+    case "REMOVE_FROM_COMPARE":
+      return state.filter(player => player.id !== action.id);
     default:
       return state;
   }
