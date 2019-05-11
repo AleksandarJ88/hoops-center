@@ -11,20 +11,13 @@ import filterPlayersAsync from "./actions/filters";
 
 const store = configureStore();
 
-store.dispatch(showPlayerAsync(117));
-store.dispatch(showPlayerAsync(125));
+store.dispatch(showPlayerAsync(127));
 
-store.dispatch(addToCompareAsync(118));
-store.dispatch(addToCompareAsync(128));
-store.dispatch(addToCompareAsync(135));
+// store.dispatch(addToCompareAsync(118));
+// store.dispatch(addToCompareAsync(128));
+// store.dispatch(addToCompareAsync(135));
 
-setTimeout(() => {
-  store.dispatch(removeFromCompare({id: 135}));
-}, 3000)
-
-
-
-//store.dispatch(filterPlayersAsync("davis"));
+store.dispatch(filterPlayersAsync("wiggins"));
 
 store.subscribe(() => console.log(store.getState()));
 

@@ -19,7 +19,7 @@ const addToCompare = (
 
 // REMOVE_FROM_COMPARE
 
-export const removeFromCompare = ({id} = {}) => ({
+export const removeFromCompare = (id) => ({
   type: "REMOVE_FROM_COMPARE",
   id
 })

@@ -11,7 +11,7 @@ const filterPlayersAsync = (text) => async dispatch => {
     const result = await fetch(`https://www.balldontlie.io/api/v1/players?search=${text}&per_page=100`);
     const data = await result.json();
     for (const player of data.data) {
-      if(player.id <= 493) {
+      if(player.id <= 493 && text.length >=3) {
         players.push(player);
       }
     }
