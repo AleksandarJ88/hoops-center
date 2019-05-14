@@ -4,7 +4,7 @@ import SearchItem from "./SearchItem";
 
 const SearchResults = (props) => (
   <div>
-    {props.filters.map(player => {
+    {props.filteredPlayers.map(player => {
       return <SearchItem key={player.id} player={player}/>
     })}
   </div>
@@ -13,7 +13,7 @@ const SearchResults = (props) => (
 const mapStateToProps = (state) => {
   return {
     player: state.player,
-    filters: state.filters
+    filteredPlayers: state.filteredPlayers
   };
 };
 

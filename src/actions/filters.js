@@ -5,6 +5,13 @@ const filterPlayers = player => ({
   player
 });
 
+// SET_TEXT_FILTER
+
+const setTextFilter = (text = "") => ({
+  type: "SET_TEXT_FILTER",
+  text
+})
+
 const filterPlayersAsync = (text) => async dispatch => {
   try {
    const players = [];
@@ -12,12 +19,17 @@ const filterPlayersAsync = (text) => async dispatch => {
     const data = await result.json();
     for (const player of data.data) {
       if(player.id <= 493 && text.length >=3) {
-        players.push(player);
+        for(const ids of players) {
+          if(!ids.id.includes(player.id)) {
+            players.push(player);
+          }
+        }
       }
     }
     for (const player of players) {
       dispatch(filterPlayers(player));
     }
+    dispatch(setTextFilter(text));
   } catch (e) {
     dispatch(() => e);
   }

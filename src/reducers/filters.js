@@ -1,8 +1,8 @@
-//Filters Reducer
+//Filter Players Reducer
 
-const filtersReducerDefaultState = [];
+const filteredPlayersReducerDefaultState = [];
 
-const filtersReducer = (state = filtersReducerDefaultState, action) => {
+export const filteredPlayersReducer = (state = filteredPlayersReducerDefaultState, action) => {
   switch (action.type) {
     case "FILTER_PLAYERS":
       return [
@@ -11,7 +11,22 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
       ];
     default:
       return state;
-  }
-}
+  };
+};
 
-export default filtersReducer;
+// Text Filter Reducer
+
+const textFilterReducerDefaultState = {
+  text: ""
+};
+
+export const textFilterReducer = (state = textFilterReducerDefaultState, action) => {
+  switch (action.type) {
+    case "SET_TEXT_FILTER":
+      return {
+        text: action.text
+      };
+    default:
+      return state;
+  };
+};

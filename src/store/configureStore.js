@@ -1,14 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import playerReducer from "../reducers/player";
-import filtersReducer from "../reducers/filters";
+import { filteredPlayersReducer, textFilterReducer } from "../reducers/filters";
 import compareReducer from "../reducers/compare";
 
 const configureStore = () => {
   const store = createStore(
     combineReducers({
       player: playerReducer,
-      filters: filtersReducer,
+      filteredPlayers: filteredPlayersReducer,
+      textFilter: textFilterReducer,
       compare: compareReducer
     }), applyMiddleware(thunk)
   );

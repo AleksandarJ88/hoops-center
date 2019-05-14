@@ -12,7 +12,7 @@ const ShowPlayer = (props) => (
 const mapStateToProps = (state) => {
   return {
     player: state.player,
-    filters: state.filters
+    filteredPlayers: state.filteredPlayers
   };
 };
 

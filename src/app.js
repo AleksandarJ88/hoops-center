@@ -13,11 +13,10 @@ const store = configureStore();
 
 store.dispatch(showPlayerAsync(127));
 
-// store.dispatch(addToCompareAsync(118));
-// store.dispatch(addToCompareAsync(128));
-// store.dispatch(addToCompareAsync(135));
+store.dispatch(addToCompareAsync(118));
+store.dispatch(addToCompareAsync(128));
 
-store.dispatch(filterPlayersAsync("wiggins"));
+store.dispatch(filterPlayersAsync("jo"));
 
 store.subscribe(() => console.log(store.getState()));
 
