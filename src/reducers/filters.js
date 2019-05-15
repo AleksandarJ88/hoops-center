@@ -9,6 +9,8 @@ export const filteredPlayersReducer = (state = filteredPlayersReducerDefaultStat
         ...state,
         action.player
       ];
+    case "REMOVE_EVERYONE":
+      return filteredPlayersReducerDefaultState;
     default:
       return state;
   };

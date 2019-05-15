@@ -7,7 +7,7 @@ import AppRouter from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
 import showPlayerAsync from "./actions/player";
 import { addToCompareAsync, removeFromCompare } from "./actions/compare";
-import filterPlayersAsync from "./actions/filters";
+import { filterPlayersAsync } from "./actions/filters";
 
 const store = configureStore();
 
@@ -16,7 +16,7 @@ store.dispatch(showPlayerAsync(127));
 store.dispatch(addToCompareAsync(118));
 store.dispatch(addToCompareAsync(128));
 
-store.dispatch(filterPlayersAsync("jo"));
+// store.dispatch(filterPlayersAsync("michael"));
 
 store.subscribe(() => console.log(store.getState()));
 
