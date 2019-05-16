@@ -1,6 +1,6 @@
 // ADD_TO_COMPARE
 
-const addToCompare = (
+export const addToCompare = (
   {
     id = undefined,
     firstName = "",

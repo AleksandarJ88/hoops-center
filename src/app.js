@@ -11,10 +11,10 @@ import { filterPlayersAsync } from "./actions/filters";
 
 const store = configureStore();
 
-store.dispatch(showPlayerAsync(127));
+//store.dispatch(showPlayerAsync(127));
 
-store.dispatch(addToCompareAsync(118));
-store.dispatch(addToCompareAsync(128));
+// store.dispatch(addToCompareAsync(118));
+// store.dispatch(addToCompareAsync(128));
 
 // store.dispatch(filterPlayersAsync("michael"));
 

@@ -4,12 +4,20 @@ import { filterPlayersAsync, setTextFilter, removeEveryone } from "../actions/fi
 
 const SearchFilter = (props) => (
   <div>
-    <form >
-      <input type="text" name="player" placeholder="Enter player name" autoComplete="off" value={props.textFilter.text} onChange={e => {
-        props.dispatch(setTextFilter(e.target.value));
-        props.dispatch(removeEveryone());
-        props.dispatch(filterPlayersAsync(props.textFilter.text));
-      }} />
+    <form onSubmit={e => {
+      e.preventDefault();
+      props.dispatch(removeEveryone());
+      props.dispatch(filterPlayersAsync(props.textFilter.text));
+      props.dispatch(setTextFilter());
+    }}>
+      <input
+        type="text"
+        name="player"
+        placeholder="Enter player name"
+        autoComplete="off"
+        value={props.textFilter.text}
+        onChange={e => props.dispatch(setTextFilter(e.target.value))}
+      />
       <button>Search</button>
     </form>
   </div>
@@ -22,10 +30,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(SearchFilter);
-
-// onSubmit={(e) => {
-//   e.preventDefault();
-//   props.dispatch(removeEveryone());
-//   props.dispatch(filterPlayersAsync(props.textFilter.text));
-//   props.dispatch(setTextFilter());
-// }}
