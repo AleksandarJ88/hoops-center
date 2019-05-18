@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 import playerReducer from "../reducers/player";
 import { filteredPlayersReducer, textFilterReducer } from "../reducers/filters";
 import compareReducer from "../reducers/compare";
+import errorsReducer from "../reducers/errors";
 
 const configureStore = () => {
   const store = createStore(
@@ -10,7 +11,8 @@ const configureStore = () => {
       player: playerReducer,
       filteredPlayers: filteredPlayersReducer,
       textFilter: textFilterReducer,
-      compare: compareReducer
+      compare: compareReducer,
+      errors: errorsReducer
     }), applyMiddleware(thunk)
   );
   return store;

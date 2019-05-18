@@ -6,7 +6,7 @@ const CompareList = (props) => (
   <div>
     <h3>Compare Screen</h3>
     {props.compare.map(player => {
-      return <CompareItem key={player.id} player={player}/>
+      return <CompareItem key={player.id} player={player} dispatchCall={props.dispatch}/>
     })}
   </div>
 );

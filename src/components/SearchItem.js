@@ -1,5 +1,5 @@
 import React from "react";
-import showPlayerAsync from "../actions/player";
+import { showPlayerAsync } from "../actions/player";
 import { connect } from "react-redux";
 
 const SearchItem = (props) => (

@@ -4,7 +4,8 @@ const playerReducerDefaultState = {
   id: undefined,
   firstName: "",
   lastName: "",
-  team: ""
+  team: "",
+  error: ""
 };
 
 const playerReducer = (state = playerReducerDefaultState, action) => {
@@ -13,6 +14,10 @@ const playerReducer = (state = playerReducerDefaultState, action) => {
       return {
         ...action.player
       };
+    case "ADD_ERROR":
+      return {
+        ...action.player
+      }
     default:
       return state;
     }

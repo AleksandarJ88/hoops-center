@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { filterPlayersAsync, setTextFilter, removeEveryone } from "../actions/filters";
+import { resetState } from "../actions/errors"
 
 const SearchFilter = (props) => (
   <div>
@@ -16,7 +17,11 @@ const SearchFilter = (props) => (
         placeholder="Enter player name"
         autoComplete="off"
         value={props.textFilter.text}
-        onChange={e => props.dispatch(setTextFilter(e.target.value))}
+        onChange={(e) => {
+          props.dispatch(setTextFilter(e.target.value))
+          props.dispatch(resetState());
+          props.dispatch(removeEveryone());
+        }}
       />
       <button>Search</button>
     </form>

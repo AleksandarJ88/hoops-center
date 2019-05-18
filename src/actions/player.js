@@ -13,13 +13,22 @@ const showPlayer = (
     id,
     firstName,
     lastName,
-    team
+    team,
   }
 });
 
+// ADD_ERROR
+
+export const addError = (id) => ({
+  type: "ADD_ERROR",
+  player: {
+    error: "Two players already on compare screen. Please remove at least one and try again."
+  }
+})
+
 // ASYNCHRONOUS ACTION
 
-const showPlayerAsync = (playerID) => async dispatch => {
+export const showPlayerAsync = (playerID) => async dispatch => {
   try {    
     const result = await fetch(`https://www.balldontlie.io/api/v1/stats?seasons[]=2018&player_ids[]=${playerID}&per_page=100`);
     const data = await result.json();
@@ -32,5 +41,3 @@ const showPlayerAsync = (playerID) => async dispatch => {
     dispatch(() => e);
   }
 };
-
-export default showPlayerAsync;
