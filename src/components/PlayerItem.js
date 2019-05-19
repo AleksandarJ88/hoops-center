@@ -3,9 +3,16 @@ import { connect } from "react-redux";
 
 const PlayerItem = (props) => (
   <div>
-    {props.player.id && <p>First name: {props.player.firstName}</p>}
-    {props.player.id && <p>Last name: {props.player.lastName}</p>}
-    {props.player.id && <p>Team: {props.player.team}</p>}
+    {props.player.id &&
+      <div>
+        <p>{props.player.firstName} {props.player.lastName}</p>
+        <p>{props.player.team}</p>
+        <p>Season 2018/2019</p>
+        <p>Games played: {props.player.gamesPlayed}</p>
+        <p>points per game: {props.player.avgPts}</p>
+        <p>assists per game: {props.player.avgAst}</p>
+        <p>rebounds per game: {props.player.avgReb}</p>
+      </div>}
   </div>
 );
 

@@ -51,9 +51,9 @@ export const showPlayerAsync = (playerID) => async dispatch => {
       lastName: data.data[0].player.last_name,
       team: data.data[0].team.full_name,
       gamesPlayed: totalGames,
-      avgPts: totalPoints / totalGames,
-      avgAst: totalAssists / totalGames,
-      avgReb: totalRebounds / totalGames
+      avgPts: Number.parseFloat((totalPoints / totalGames).toFixed(1)),
+      avgAst: Number.parseFloat((totalAssists / totalGames).toFixed(1)),
+      avgReb: Number.parseFloat((totalRebounds / totalGames).toFixed(1))
     }));
   } catch (e) {
     dispatch(() => e);
