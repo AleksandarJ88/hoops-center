@@ -4,11 +4,12 @@ import { connect } from "react-redux";
 
 const SearchItem = (props) => (
   <div>
-    <a 
+    <a
+      className="search-result"
       href="javascript:void(0);"
       onClick={() => props.dispatch(showPlayerAsync(props.player.id))}>
       <p>
-        {props.player.first_name} {props.player.last_name}
+        {props.player.last_name}, {props.player.first_name}
       </p>
     </a>
   </div>

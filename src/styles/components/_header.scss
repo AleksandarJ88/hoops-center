@@ -8,17 +8,17 @@
 
 
 
-.header__navLink {
+.header__nav-link {
   padding: 0.6rem;
   margin: 5px;
   text-decoration: none;
 }
 
-.header__navLink:hover {
+.header__nav-link:hover {
   border-bottom: 1.4px solid $light-pink;
 }
 
-.header__activeLink {
+.header__active-link {
   color: darken($light-pink, 20%);
   border-bottom: 1.4px solid $light-pink;
 }

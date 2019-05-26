@@ -5,13 +5,14 @@ import { resetState } from "../actions/errors"
 
 const SearchFilter = (props) => (
   <div>
-    <form onSubmit={e => {
+    <form className="search" onSubmit={e => {
       e.preventDefault();
       props.dispatch(removeEveryone());
       props.dispatch(filterPlayersAsync(props.textFilter.text));
       props.dispatch(setTextFilter());
     }}>
       <input
+        className="search__input"
         type="text"
         name="player"
         placeholder="Enter player name"
@@ -19,8 +20,6 @@ const SearchFilter = (props) => (
         value={props.textFilter.text}
         onChange={(e) => {
           props.dispatch(setTextFilter(e.target.value))
-          props.dispatch(resetState());
-          props.dispatch(removeEveryone());
         }}
       />
       <button>Search</button>

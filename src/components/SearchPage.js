@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const SearchPage = (props) => (
   <div>
-    <p>Search for any active NBA player. Type at least three characters and press Enter key or Search button!</p>
+    <p className="paragraph-default">Search for any active NBA player. Type at least three characters and press Enter key or Search button!</p>
     <SearchFilter />
     <SearchResults />
     <ShowPlayer route={props.history}/>

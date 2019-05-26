@@ -1,0 +1,22 @@
+.search {
+  display: flex;
+  padding: $m-size;
+}
+
+.search__input {
+  background-color: darken($off-white, 5%);
+  border: none;
+  border-radius: 20px;
+  color: $light-pink;
+  font-weight: 540;
+  outline: none;
+  padding-left: $s-size;
+  flex-grow: 1;
+  margin-right: $s-size;
+}
+
+.search-result {
+  text-decoration: none;
+  color: $light-pink;
+  text-align: center;
+}

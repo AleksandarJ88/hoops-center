@@ -10,8 +10,20 @@ body {
 
 button {
   cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: .6rem;
+  background: darken($light-pink, 20%);
 }
 
 button:disabled {
   cursor: default;
 }
+
+.paragraph-default {
+  font-size: 1.8rem;
+  text-align: justify;
+  text-align-last: center;
+  color: $dark-blue;
+};

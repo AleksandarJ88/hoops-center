@@ -6,7 +6,6 @@ import { tooManyPlayers, playerAlreadyExists } from "../actions/errors";
 
 const ShowPlayer = (props) => (
   <div>
-    <h3>Selected Player</h3>
     <p>{props.compare.length === 2 && props.errors.tooManyPlayers}</p>
     <p>{props.errors.playerAlreadyExists}</p>
     <PlayerItem player={props.player}/>
