@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 const PlayerItem = (props) => (
   <div>
     {props.player.id &&
-      <div>
+      <div className="player">
         <p>{props.player.firstName} {props.player.lastName}</p>
         <p>{props.player.team}</p>
         <p>Season 2018/2019</p>
