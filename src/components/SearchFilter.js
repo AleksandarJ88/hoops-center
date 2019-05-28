@@ -10,6 +10,7 @@ const SearchFilter = (props) => (
       props.dispatch(removeEveryone());
       props.dispatch(filterPlayersAsync(props.textFilter.text));
       props.dispatch(setTextFilter());
+      props.dispatch(resetState());
     }}>
       <input
         className="search__input"
