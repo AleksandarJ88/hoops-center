@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 import CompareItem from "./CompareItem";
 
 const CompareList = (props) => (
-  <div>
-    <h3>Compare Screen</h3>
+  <div className="compare">
     {props.compare.map(player => {
       return <CompareItem key={player.id} player={player} dispatchCall={props.dispatch}/>
     })}
