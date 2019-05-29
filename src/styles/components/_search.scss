@@ -1,5 +1,6 @@
 .search {
   display: flex;
+  flex-direction: column;
   padding: $m-size;
 }
 
@@ -10,13 +11,22 @@
   color: $light-pink;
   font-weight: 540;
   outline: none;
-  padding-left: $s-size;
+  padding: 0.6rem;
   flex-grow: 1;
-  margin-right: $s-size;
+  margin: 0 0 $s-size 0;
 }
 
 .search-result {
   text-decoration: none;
   color: $light-pink;
   text-align: center;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .search {
+    flex-direction: row;
+  }
+  .search__input {
+    margin:0 $s-size 0 0;
+  }
 }
