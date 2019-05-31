@@ -9,7 +9,6 @@
 .header__nav-bar {
   display: flex;
   flex-direction: column;
-
 }
 
 .header__nav-link {
@@ -25,6 +24,7 @@
 .header__active-link {
   color: darken($light-pink, 80%);
   border-bottom: 0;
+  margin-right: $s-size;
 }
 
 @media(min-width: $desktop-breakpoint) {
@@ -33,8 +33,8 @@
     justify-content: center;
   }
   .header__nav-link {
-    padding: 0.6rem;
-    margin: .6rem;
+    padding: $xs-size;
+    margin: $xs-size;
   }
   .header__nav-link:hover {
     border-bottom: 1.4px solid $light-pink;

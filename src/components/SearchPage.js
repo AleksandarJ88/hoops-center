@@ -13,4 +13,4 @@ const SearchPage = (props) => (
   </div>
 );
 
-export default connect()(SearchPage);
+export default SearchPage;

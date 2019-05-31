@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PlayerItem from "./PlayerItem";
-import { addToCompareAsync, addToCompare } from "../actions/compare";
+import { addToCompareAsync } from "../actions/compare";
 import { tooManyPlayers, playerAlreadyExists } from "../actions/errors";
 
 const ShowPlayer = (props) => (
