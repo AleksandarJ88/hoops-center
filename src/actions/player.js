@@ -1,4 +1,5 @@
 // SHOW_PLAYER
+// Object destructuring used to grab info on player after asynchronous action fetches the data
 
 const showPlayer = (
   {
@@ -25,7 +26,12 @@ const showPlayer = (
   }
 });
 
-// ASYNCHRONOUS ACTION
+/* ASYNCHRONOUS ACTION
+Uses player id to fetch the data from api.
+Program loops through all the games player was part of and
+calculates average stats, and then we dispatch synchronous
+action generator to update the state and display player stats in UI.
+*/
 
 export const showPlayerAsync = (playerID) => async dispatch => {
   try {

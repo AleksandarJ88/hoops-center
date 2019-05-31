@@ -2,6 +2,10 @@ import React from "react";
 import { removeFromCompare } from "../actions/compare";
 import { resetState } from "../actions/errors";
 
+/*Child of CompareList Component, used to display players' stats on compare page.
+It recieves state data from parent component via props and displays it to UI.
+*/
+
 const CompareItem = (props) => (
   <div>
   {props.player.id &&

@@ -1,4 +1,5 @@
 // ADD_TO_COMPARE
+// Object destructuring used to grab info on player after asynchronous action fetches the data
 
 export const addToCompare = (
   {
@@ -32,8 +33,12 @@ export const removeFromCompare = (id) => ({
   id
 })
 
-// ASYNCHRONOUS ACTION
-
+/* ASYNCHRONOUS ACTION
+Uses player id to fetch the data from api.
+Loops through all the games player was part of and
+calculates average stats, and then we dispatch synchronous
+action generator to update the state and display player stats on compare page.
+*/
 export const addToCompareAsync = (playerID) => async dispatch => {
   try {
     let totalGames = 0;

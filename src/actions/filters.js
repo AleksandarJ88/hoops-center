@@ -18,6 +18,12 @@ export const setTextFilter = (text = "") => ({
   text
 })
 
+/* Asynchronous action
+Uses api's search function to filter players based on a string provided.
+Code checks if a filtered player is from a current season and then pushes it to an array.
+Synchronous action generator is then used by the reducer to update the state.
+*/
+
 export const filterPlayersAsync = (text) => async dispatch => {
   try {
    const players = [];

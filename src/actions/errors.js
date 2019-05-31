@@ -20,6 +20,7 @@ export const noSearchResults = () => ({
 })
 
 // RESET_STATE
+// sets error reducer to an empty object in order to remove error messages from UI
 
 export const resetState = () => ({
   type: "RESET_STATE"

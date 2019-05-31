@@ -1,5 +1,9 @@
 import React from "react";
 
+/*
+Used to display single player's stats. Receives data from ShowPlayer component via props and displays it to UI.
+*/
+
 const PlayerItem = (props) => (
   <div>
     {props.player.id &&
