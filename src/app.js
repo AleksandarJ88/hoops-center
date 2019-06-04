@@ -11,14 +11,18 @@ import { filterPlayersAsync } from "./actions/filters";
 
 const store = configureStore();
 
-//store.dispatch(showPlayerAsync(127));
+/*TEST AREA
 
-// store.dispatch(addToCompareAsync(118));
-// store.dispatch(addToCompareAsync(128));
+store.dispatch(showPlayerAsync(127));
 
-// store.dispatch(filterPlayersAsync("michael"));
+store.dispatch(addToCompareAsync(118));
+store.dispatch(addToCompareAsync(128));
+
+store.dispatch(filterPlayersAsync("michael"));
 
 store.subscribe(() => console.log(store.getState()));
+
+*/
 
 const jsx = (
   <Provider store={store}>

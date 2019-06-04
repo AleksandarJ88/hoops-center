@@ -8,6 +8,7 @@ const ShowPlayer = (props) => (
   <div>
     <p className="error">{props.compare.length === 2 && props.errors.tooManyPlayers}</p>
     <p className="error">{props.errors.playerAlreadyExists}</p>
+    <p className="error">{props.errors.failedToFetch}</p>
     <PlayerItem player={props.player}/>
     {props.player.id &&
       <div className="player__button">

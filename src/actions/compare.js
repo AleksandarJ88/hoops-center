@@ -1,3 +1,5 @@
+import { failedToFetch } from "./errors";
+
 // ADD_TO_COMPARE
 // Object destructuring used to grab info on player after asynchronous action fetches the data
 
@@ -68,6 +70,6 @@ export const addToCompareAsync = (playerID) => async dispatch => {
       avgReb: Number.parseFloat((totalRebounds / totalGames).toFixed(1))
     }));
   } catch (e) {
-    dispatch(() => e);
+    dispatch(failedToFetch());
   }
 };

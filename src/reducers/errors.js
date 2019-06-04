@@ -3,7 +3,7 @@
 const errorsReducerDefaultState = {
   tooManyPlayers: "",
   playerAlreadyExists: "",
-  noSearchResults: ""
+  failedToFetch: ""
 }
 
 const errorsReducer = (state = errorsReducerDefaultState, action) => {
@@ -18,10 +18,10 @@ const errorsReducer = (state = errorsReducerDefaultState, action) => {
         ...state,
         playerAlreadyExists: action.error
       };
-    case "NO_SEARCH_RESULTS":
+    case "FAILED_TO_FETCH":
       return {
         ...state,
-        noSearchResults: action.error
+        failedToFetch: action.error
       };
     case "RESET_STATE":
       return errorsReducerDefaultState;

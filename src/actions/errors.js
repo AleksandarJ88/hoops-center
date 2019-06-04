@@ -12,11 +12,11 @@ export const playerAlreadyExists = () => ({
   error: "That player has already been added to the compare screen. Please select different player and try again."
 })
 
-// NO_SEARCH_RESULTS
+// FAILED_TO_FETCH
 
-export const noSearchResults = () => ({
-  type: "NO_SEARCH_RESULTS",
-  error: "No player found for your search. Please try again."
+export const failedToFetch = () => ({
+  type: "FAILED_TO_FETCH",
+  error: "Failed to fetch data. Check your internet connection and try again."
 })
 
 // RESET_STATE

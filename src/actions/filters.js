@@ -1,3 +1,5 @@
+import { failedToFetch } from "./errors";
+
 // FILTER_PLAYERS
 
 const filterPlayers = player => ({
@@ -38,6 +40,6 @@ export const filterPlayersAsync = (text) => async dispatch => {
       dispatch(filterPlayers(player));
     }
   } catch (e) {
-    dispatch(() => e);
+    dispatch(failedToFetch());
   }
 };
