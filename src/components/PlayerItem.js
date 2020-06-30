@@ -11,7 +11,7 @@ const PlayerItem = (props) => (
         <div className="player__info">
           <p>{props.player.firstName} {props.player.lastName}</p>
           <p>{props.player.team}</p>
-          <p>Season 2018/2019</p>
+          <p>Season 2019/2020</p>
         </div>
         <p>Games played: {props.player.gamesPlayed}</p>
         <p className="player__stats">points per game: {props.player.avgPts}</p>

@@ -47,7 +47,7 @@ export const addToCompareAsync = (playerID) => async dispatch => {
     let totalPoints = 0;
     let totalAssists = 0;
     let totalRebounds = 0;
-    const result = await fetch(`https://www.balldontlie.io/api/v1/stats?seasons[]=2018&player_ids[]=${playerID}&per_page=100`);
+    const result = await fetch(`https://www.balldontlie.io/api/v1/stats?seasons[]=2019&player_ids[]=${playerID}&per_page=100`);
     const data = await result.json();
     for(const game of data.data) {
       if(game.min) {

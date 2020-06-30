@@ -12,7 +12,7 @@ const CompareItem = (props) => (
     <div className="player--compare">
       <p>{props.player.firstName} {props.player.lastName}</p>
       <p>{props.player.team}</p>
-      <p>Season 2018/2019</p>
+      <p>Season 2019/2020</p>
       <p>Games played: {props.player.gamesPlayed}</p>
       <div className="player__stats">
         <p>points per game: {props.player.avgPts}</p>
