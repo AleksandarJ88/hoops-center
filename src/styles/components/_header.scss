@@ -37,10 +37,10 @@
     margin: $xs-size;
   }
   .header__nav-link:hover {
-    border-bottom: 1.4px solid $light-pink;
+    border-bottom: 2px solid $light-pink;
   }
   .header__active-link {
     color: darken($light-pink, 20%);
-    border-bottom: 1.4px solid $light-pink;
+    border-bottom: 2px solid $light-pink;
   }
 }

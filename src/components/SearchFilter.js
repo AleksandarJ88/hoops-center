@@ -29,7 +29,7 @@ const SearchFilter = (props) => (
           props.dispatch(setTextFilter(e.target.value))
         }}
       />
-      <button>Search</button>
+      <button className="search__button">Search</button>
     </form>
   </div>
 );
