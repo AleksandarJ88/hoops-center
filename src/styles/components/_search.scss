@@ -3,29 +3,34 @@
   flex-direction: column;
   justify-content: center;
   padding: $m-size;
+  margin-top: $xl-size;
   &__input {
-    background-color: darken($off-white, 5%);
     border: none;
     border-radius: 20px;
-    color: $light-pink;
+    color: $color-primary;
     outline: none;
     padding: $s-size;
     flex-basis: calc(100% * 1/3);
     margin: 0 0 $s-size 0;
+    box-shadow: 1px 1px 4px -3px rgba(0,0,0,0.75);
+  }
+  &-result {
+    text-decoration: none;
+    color: $blue-yonder;
+    text-align: center;
+    &:hover {
+      color: $color-primary;
+      font-weight: bold;
+    }
   }
 }
 
-.search-result {
-  text-decoration: none;
-  color: $light-pink;
-  text-align: center;
-}
 
 @media (min-width: $desktop-breakpoint) {
   .search {
     flex-direction: row;
-  }
-  .search__input {
-    margin:0 $s-size 0 0;
+    &__input {
+      margin:0 $s-size 0 0;
+    }
   }
 }

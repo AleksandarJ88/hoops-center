@@ -9,7 +9,7 @@ It recieves state data from parent component via props and displays it to UI.
 const CompareItem = (props) => (
   <div>
   {props.player.id &&
-    <div className="player--compare">
+    <div className="player player--compare">
       <p>{props.player.firstName} {props.player.lastName}</p>
       <p>{props.player.team}</p>
       <p>Season 2019/2020</p>
