@@ -1,7 +1,13 @@
 .container {
   max-width: 100rem;
   margin: 0 auto;
-  padding: 0 10rem;
+  padding: 0 2rem;
   background-color: $cultured;
   min-height: 100vh;
+  @media all and (min-width: $mobile) {
+    padding: 0 5rem;
+    @media all and (min-width: $tablet) {
+      padding: 0 10rem;
+    }
+  }
 }

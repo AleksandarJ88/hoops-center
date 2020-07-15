@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-@media (min-width: $desktop-breakpoint) {
+@media all and (min-width: $tablet) {
   .compare {
     flex-direction: row;
     justify-content: space-around;
