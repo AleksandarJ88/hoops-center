@@ -8,9 +8,9 @@ Web application used for fetching and comparing NBA players statistics for the c
 
 ## Tech stack
 
-React
-Redux
-CSS (SASS)
+React <br/>
+Redux <br/>
+CSS (SASS) <br/>
 Webpack
 
 ## Launch
